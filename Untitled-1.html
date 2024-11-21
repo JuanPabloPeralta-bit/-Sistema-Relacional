@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tarjeta Interactiva - The Foking Dog</title>
+</head>
+<body>
+    <div class="tarjeta">
+        <div class="fondo"></div>
+        <div class="contenido">
+            <h1>The Foking Dog</h1>
+            <p class="biografia">¡Bienvenidos a The Foking Dog, su discográfica favorita!</p>
+            <div class="habilidades">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <div class="contacto">
+                <p>Email: contact@thefokingdog.com</p>
+                <p>Teléfono: +123456789</p>
+            </div>
+            <div class="mensaje-secreto">Mensaje secreto: ¡Gracias por visitarnos!</div>
+            <div class="redes-sociales">
+                <a href="#" class="icono">Facebook</a>
+                <a href="#" class="icono">Twitter</a>
+                <a href="#" class="icono">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.tarjeta {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.fondo {
+    background-image: url('fondo.jpg'); /* Cambiar a su imagen */
+    background-attachment: fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.contenido {
+    padding: 20px;
+    color: white;
+}
+
+.habilidades span {
+    display: inline-block;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.redes-sociales .icono {
+    margin-right: 10px;
+    transition: color 0.4s, transform 0.4s;
+}
+
+.redes-sociales .icono:hover {
+    color: #ff0; /* Cambiar color al pasar el ratón */
+    transform: scale(1.1); /* Aumentar tamaño al pasar el ratón */
+}
+
+.mensaje-secreto {
+    display: none;
+}
+
+.nombre:hover + .mensaje-secreto {
+    display: block; /* Mostrar mensaje al pasar el ratón por encima */
+}
+
+document.querySelector('.redes-sociales').addEventListener('mouseover', function() {
+    document.querySelector('.mensaje-secreto').style.display = 'block';
+});
+
+document.querySelector('.redes-sociales').addEventListener('mouseleave', function() {
+    document.querySelector('.mensaje-secreto').style.display = 'none';
+});
+}
+<meta name="description" content="The Foking Dog: Tu discográfica favorita, dedicada a la música de calidad.">
+<!-- Sección de Música Recomendadas -->
+<div class="musica-recomendada">
+    <h2>Música Recomendada:</h2>
+    <div class="album">
+        <img src="album1.jpg" alt="Álbum 1">
+        <p>Album 1</p>
+    </div>
+    <div class="album">
+        <img src="album2.jpg" alt="Álbum 2">
+        <p>Album 2</p>
+    </div>
+</div>
+@media (max-width: 600px) {
+    .tarjeta {
+        width: 90%;
+        height: auto;
+    }
+}
+<meta name="description" content="The Foking Dog: Tu discográfica favorita, dedicada a la música de calidad.">
+<!-- Sección de Música Recomendadas -->
+<div class="musica-recomendada">
+    <h2>Música Recomendada:</h2>
+    <div class="album">
+        <img src="album1.jpg" alt="Álbum 1">
+        <p>Album 1</p>
+    </div>
+    <div class="album">
+        <img src="album2.jpg" alt="Álbum 2">
+        <p>Album 2</p>
+    </div>
+</div>
+<div class="mapa">
+    <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen></iframe>
+</div>
+<div class="reproductor">
+    <audio controls>
+        <source src="musica/ejemplo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</div>
+<div class="suscripcion">
+    <h2>Suscríbete para Más Actualizaciones</h2>
+    <form>
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirse</button>
+    </form>
+</div>
+<button id="toggleTheme">Modo Oscuro/Claro</button>
+const toggleButton = document.getElementById('toggleTheme');
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Interactiva - The Foking Dog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>The Foking Dog</h1>
+    </header>
+
+    <div class="tarjeta">
+        <div class="fondo">
+            <div class="fondo-imagen"></div>
+        </div>
+        <div class="contenido">
+            <p class="biografia">¡Bienvenidos a The Foking Dog, su discográfica favorita!</p>
+
+            <div class="habilidades">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="musica-recomendada">
+                <h2>Música Recomendada:</h2>
+                <audio controls>
+                    <source src="musica/ejemplo.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+
+            <div class="redes-sociales">
+                <a href="#" class="icono"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="icono"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="icono"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div class="suscripcion">
+                <h2>Suscríbete para Más Actualizaciones</h2>
+                <form id="subscriptionForm">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
+            <div class="mapa">
+                <h2>Nuestra Ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen></iframe>
+            </div>
+
+            <button id="toggleTheme">Modo Oscuro/Claro</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #282c34;
+    color: white;
+}
+
+.tarjeta {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.fondo {
+    position: relative;
+}
+
+.fondo-imagen {
+    background-image: url('fondo.jpg'); /* Cambiar a su imagen */
+    background-attachment: fixed;
+    background-size: cover;
+    height: 200px;
+}
+
+.contenido {
+    padding: 20px;
+}
+
+.habilidades span {
+    display: inline-block;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.redes-sociales {
+    margin-top: 20px;
+}
+
+.redes-sociales .icono {
+    margin-right: 10px;
+    color: inherit;
+    font-size: 24px;
+    transition: color 0.4s;
+}
+
+.redes-sociales .icono:hover {
+    color: #ff0;
+}
+
+.suscripcion form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    .tarjeta {
+        width: 95%;
+    }
+}
+3. Interactividad con JavaScript (script.js)
+const toggleButton = document.getElementById('toggleTheme');
+const form = document.getElementById('subscriptionForm');
+
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Manejar el envío del formulario de suscripción
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = form.querySelector('input[type="email"]').value;
+    alert(`Te has suscrito con el correo: ${email}`);
+    form.reset(); // Reiniciar el formulario
+});
